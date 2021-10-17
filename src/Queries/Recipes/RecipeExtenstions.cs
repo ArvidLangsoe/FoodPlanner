@@ -4,13 +4,9 @@ namespace Kappelhoj.FoodPlanner.Queries.Recipes
 {
     public static class RecipeExtenstions
     {
-
-        public static RecipeViewModel MapToViewModel(this Recipe recipe)
+        public static RecipeViewModel MapToViewModel(this Recipe recipe) => new()
         {
-            return new RecipeViewModel()
-            {
-                Id = recipe.Id
-            };
-        }
+            Id = recipe.Id
+        };
     }
 }

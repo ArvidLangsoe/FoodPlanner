@@ -12,11 +12,10 @@ namespace Kappelhoj.FoodPlanner.Queries.UnitTests.Recipes
 {
     public class RecipesQueryTests
     {
-        private Fixture _fixture = new Fixture();
+        private readonly Fixture _fixture = new Fixture();
 
-        private Mock<IEntityRetriever> _entityRetrieverMock;
-        private RecipesQueryHandler _recipesQueryHandler;
-
+        private readonly Mock<IEntityRetriever> _entityRetrieverMock;
+        private readonly RecipesQueryHandler _recipesQueryHandler;
 
         public RecipesQueryTests()
         {

@@ -11,9 +11,8 @@ namespace Kappelhoj.FoodPlanner.Commands.UnitTests.Recipes
 {
     public class AddRecipeCommandTests
     {
-
-        private AddRecipeHandler _addRecipeHandler;
-        private Mock<IEntityPersister> _entityPersisterMock;
+        private readonly AddRecipeHandler _addRecipeHandler;
+        private readonly Mock<IEntityPersister> _entityPersisterMock;
 
         public AddRecipeCommandTests()
         {
@@ -22,7 +21,6 @@ namespace Kappelhoj.FoodPlanner.Commands.UnitTests.Recipes
             _entityPersisterMock.Setup(mock => mock.PersistEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => Task.FromResult(x));
             _addRecipeHandler = new AddRecipeHandler(_entityPersisterMock.Object);
         }
-
 
         [Fact]
         public async void GivenValidRecipe_WhenAddingRecipe_ThenRecipeIdReturned()
@@ -58,11 +56,6 @@ namespace Kappelhoj.FoodPlanner.Commands.UnitTests.Recipes
             Assert.Equal(addRecipeCommand.Title, entityCreated?.Title);
         }
 
-
-
-        private AddRecipeCommand CreateValidAddRecipeCommand()
-        {
-            return new AddRecipeCommand() { Title = "Meatballs" }; //TODO: Autofixture??
-        }
+        private AddRecipeCommand CreateValidAddRecipeCommand() => new AddRecipeCommand() { Title = "Meatballs" }; //TODO: Autofixture??
     }
 }

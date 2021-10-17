@@ -15,7 +15,7 @@ namespace Kappelhoj.FoodPlanner.Queries.Recipes
 
     public class RecipesQueryHandler : IRequestHandler<RecipesQuery, Response<IEnumerable<RecipeViewModel>>>
     {
-        private IEntityRetriever _entityRetriever;
+        private readonly IEntityRetriever _entityRetriever;
         public RecipesQueryHandler(IEntityRetriever entityRetriever)
         {
             _entityRetriever = entityRetriever;
