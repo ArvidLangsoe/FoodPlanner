@@ -1,20 +1,15 @@
-﻿using FoodPlanner.Domain.Recipes;
-using FoodPlanner.Queries.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Kappelhoj.FoodPlanner.Domain.Recipes;
 
-namespace FoodPlanner.Queries.Recipes
+namespace Kappelhoj.FoodPlanner.Queries.Recipes
 {
     public static class RecipeExtenstions
     {
 
-        public static RecipeViewModel MapToViewModel(this Recipe recipe) 
+        public static RecipeViewModel MapToViewModel(this Recipe recipe)
         {
-            return new RecipeViewModel() { 
-                Id = recipe.Id 
+            return new RecipeViewModel()
+            {
+                Id = recipe.Id
             };
         }
     }

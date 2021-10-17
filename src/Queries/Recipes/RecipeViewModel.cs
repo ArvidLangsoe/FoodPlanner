@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FoodPlanner.Queries.ViewModels
+namespace Kappelhoj.FoodPlanner.Queries.Recipes
 {
     //TODO Move to seperate project
     public class RecipeViewModel

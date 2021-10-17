@@ -1,6 +1,6 @@
-﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
-using FoodPlanner.Commands.Recipes;
-using FoodPlanner.Domain.Recipes;
+﻿using Kappelhoj.FoodPlanner.Commands.Recipes;
+using Kappelhoj.FoodPlanner.Core.Contracts;
+using Kappelhoj.FoodPlanner.Domain.Recipes;
 using Moq;
 using System;
 using System.Threading;

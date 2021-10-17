@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace FoodPlanner.Application.Core.Contracts.Infrastructure
+namespace Kappelhoj.FoodPlanner.Core.Contracts
 {
     public interface IEntityPersister
     {

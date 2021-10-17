@@ -1,14 +1,13 @@
-﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
-using FoodPlanner.Domain.Recipes;
-using FoodPlanner.Queries.ViewModels;
+﻿using Kappelhoj.FoodPlanner.Core;
+using Kappelhoj.FoodPlanner.Core.Contracts;
+using Kappelhoj.FoodPlanner.Domain.Recipes;
 using MediatR;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Queries.Recipes
+namespace Kappelhoj.FoodPlanner.Queries.Recipes
 {
     public class RecipesQuery : Query<Response<IEnumerable<RecipeViewModel>>>
     {
@@ -21,7 +20,7 @@ namespace FoodPlanner.Queries.Recipes
         {
             _entityRetriever = entityRetriever;
         }
-        
+
         public async Task<Response<IEnumerable<RecipeViewModel>>> Handle(RecipesQuery request, CancellationToken cancellationToken)
         {
             var recipesQuery = await _entityRetriever.QueryEntities<Recipe>();

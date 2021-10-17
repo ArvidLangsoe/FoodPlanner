@@ -1,12 +1,12 @@
-﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
-using FoodPlanner.Domain.Recipes;
-using Kappelhoj.FoodPlanner.Commands;
+﻿using Kappelhoj.FoodPlanner.Core;
+using Kappelhoj.FoodPlanner.Core.Contracts;
+using Kappelhoj.FoodPlanner.Domain.Recipes;
 using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands.Recipes
+namespace Kappelhoj.FoodPlanner.Commands.Recipes
 {
     public class AddRecipeCommand : Command<Response<Guid>>
     {
