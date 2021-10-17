@@ -1,14 +1,13 @@
 ﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
 using FoodPlanner.Commands.Recipes;
 using FoodPlanner.Domain.Recipes;
-using MediatR;
 using Moq;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace FoodPlanner.Commands.UnitTests.Recipes
+namespace Kappelhoj.FoodPlanner.Commands.UnitTests.Recipes
 {
     public class AddRecipeCommandTests
     {
@@ -16,7 +15,8 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
         private AddRecipeHandler _addRecipeHandler;
         private Mock<IEntityPersister> _entityPersisterMock;
 
-        public AddRecipeCommandTests() { 
+        public AddRecipeCommandTests()
+        {
 
             _entityPersisterMock = new Mock<IEntityPersister>();
             _entityPersisterMock.Setup(mock => mock.PersistEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => Task.FromResult(x));
@@ -25,7 +25,8 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
 
 
         [Fact]
-        public async void GivenValidRecipe_WhenAddingRecipe_ThenRecipeIdReturned() {
+        public async void GivenValidRecipe_WhenAddingRecipe_ThenRecipeIdReturned()
+        {
             //Arrange
             var addRecipeCommand = CreateValidAddRecipeCommand();
 
@@ -59,7 +60,8 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
 
 
 
-        private AddRecipeCommand CreateValidAddRecipeCommand() {
+        private AddRecipeCommand CreateValidAddRecipeCommand()
+        {
             return new AddRecipeCommand() { Title = "Meatballs" }; //TODO: Autofixture??
         }
     }
