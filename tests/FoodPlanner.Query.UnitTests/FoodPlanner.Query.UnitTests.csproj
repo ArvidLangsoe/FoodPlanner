@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FoodPlanner.Domain\FoodPlanner.Domain.csproj" />
-    <ProjectReference Include="..\FoodPlanner.Queries\FoodPlanner.Queries.csproj" />
+    <ProjectReference Include="..\..\src\FoodPlanner.Application.Core\FoodPlanner.Core.csproj" />
+    <ProjectReference Include="..\..\src\FoodPlanner.Queries\FoodPlanner.Queries.csproj" />
   </ItemGroup>
 
 </Project>

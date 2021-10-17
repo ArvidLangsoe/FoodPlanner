@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FoodPlanner.Application.Core\FoodPlanner.Application.Core.csproj" />
+    <ProjectReference Include="..\FoodPlanner.Application.Core\FoodPlanner.Core.csproj" />
     <ProjectReference Include="..\FoodPlanner.Domain\FoodPlanner.Domain.csproj" />
   </ItemGroup>
 

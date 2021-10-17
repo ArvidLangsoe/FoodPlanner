@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FoodPlanner.Commands\FoodPlanner.Commands.csproj" />
+    <ProjectReference Include="..\..\src\FoodPlanner.Commands\FoodPlanner.Commands.csproj" />
   </ItemGroup>
 
 </Project>
